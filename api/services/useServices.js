@@ -18,7 +18,7 @@ const user=(async(req,res)=>{
           }
           console.log(data)
           return data
-        //   res.status(201).json({ message: 'User created successfully', data });
+
         });
         
     } catch (error) {
@@ -56,52 +56,3 @@ const user1=(async(req,res)=>{
 
 module.exports={user,user1}
 
-// const db = require('../database');
-
-// const user = async () => {
-
-//     try {
-//         const sql = "INSERT INTO login (name, email, password, cpassword) VALUES (?, ?, ?, ?)";
-//         const values = [
-//             req.body.name,
-//             req.body.email,
-//             req.body.password,
-//             req.body.cpassword
-//         ];
-//         console.log(values);
-        
-//         db.query(sql, values, (err, data) => {
-//             if (err) {
-//                 console.error(err);
-//                 return err
-//             }
-//             console.log(data);
-//             return data
-//         });
-//     } catch (error) {
-//         console.error(error);
-
-//     }
-// }
-
-// const user1 = async () => {
-//     try {
-//         const sql = "SELECT * FROM login WHERE email = ? AND password = ?";
-//         db.query(sql, [req.body.email, req.body.password], (err, results) => {
-//             if (err) {
-//                 console.error(err);
-//                 return err
-//             }
-//             if (results.length > 0) {
-//                 return results;
-//             } else {
-//               return err
-//             }
-//         });
-//     } catch (error) {
-//         console.error(error);
-//         return error
-//     }
-// }
-
-// module.exports = { user, user1 };
